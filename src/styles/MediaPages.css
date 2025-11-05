@@ -1,0 +1,253 @@
+/* =======================================
+   MediaPages.css - Páginas multimedia (Películas + Música)
+   Unificadas con color de acento dinámico
+   ======================================= */
+
+/* ===== Estructura general ===== */
+.media-page {
+  animation: fadeIn 0.8s ease;
+  padding: 2rem 0;
+}
+
+/* ===== Hero ===== */
+.hero-media {
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color, var(--primary-color)) 20%, transparent),
+    rgba(255, 107, 107, 0.15)
+  );
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color, var(--primary-color)) 20%, transparent);
+}
+
+.hero-media h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-color, var(--primary-color));
+  text-shadow: 0 0 15px color-mix(in srgb, var(--accent-color, var(--primary-color)) 60%, transparent);
+  margin-bottom: 1rem;
+}
+
+.hero-media p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* ===== Listado ===== */
+.media-listado {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-soft);
+}
+
+.media-listado h2 {
+  font-size: 2rem;
+  color: var(--accent-color, var(--primary-color));
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Indicador ===== */
+.api-indicator {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--accent-color, var(--primary-color));
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  background: color-mix(in srgb, var(--accent-color, var(--primary-color)) 15%, transparent);
+  border: 1px solid var(--accent-color, var(--primary-color));
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* ===== Tarjeta multimedia ===== */
+.card-media {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--accent-color, var(--primary-color));
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-media:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color, var(--primary-color)) 30%, transparent);
+  border-color: var(--accent-color, var(--primary-color));
+}
+
+.card-media img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.media-info {
+  padding: 1.5rem;
+  color: #ddd;
+}
+
+.media-info h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.media-info p {
+  color: #ccc;
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+/* ===== Botones externos ===== */
+.btn-imdb {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 8px 16px;
+  background: #f5c518;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-imdb:hover {
+  background: #ffd950;
+  transform: translateY(-2px);
+}
+
+.btn-deezer {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 8px 16px;
+  background: var(--accent-color, #A238FF);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-deezer:hover {
+  background: color-mix(in srgb, var(--accent-color, #A238FF) 80%, white 20%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(162, 56, 255, 0.35);
+}
+/* ===== Rejilla de películas ===== */
+.grid-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .grid-media {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-media {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-media {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-media h1 { font-size: 2.3rem; }
+  .card-media img { height: 320px; }
+}
+
+@media (max-width: 480px) {
+  .hero-media h1 { font-size: 1.8rem; }
+  .media-info { padding: 1rem; }
+  .card-media img { height: 260px; }
+}
+
+/* Buscador */
+.search-container {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(15, 208, 241, 0.3);
+  background: rgba(0,0,0,0.3);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+/* === Estilo del menú desplegable al abrir === */
+select.search-input option {
+  background: #0d0d0d; /*  Fondo del menú desplegable */
+  color: white;
+  padding: 10px;
+}
+
+/* Indicador de reproducción */
+.card-media.playing {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 20px rgba(0,212,255,0.4);
+}
+
+/* Botones de preview */
+.btn-preview, .btn-itunes {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-preview {
+  background: linear-gradient(135deg, #00d4ff, #006a71);
+  color: white;
+}
+
+.btn-preview.playing {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+}
+
+.btn-itunes {
+  background: linear-gradient(135deg, #EC4899, #DB2777);
+  color: white;
+  display: block;
+}
+
+.btn-preview:hover, .btn-itunes:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}

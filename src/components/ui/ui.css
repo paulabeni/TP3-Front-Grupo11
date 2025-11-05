@@ -1,0 +1,122 @@
+/* ===============================
+   ui.css - base compartida
+   =============================== */
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--hero-accent) 15%, transparent),
+    color-mix(in srgb, var(--hero-accent) 5%, transparent)
+  );
+  border: 2px solid color-mix(in srgb, var(--hero-accent) 30%, transparent);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--hero-accent) 20%, transparent);
+  transition: all 0.3s ease;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--hero-accent) !important;
+  text-shadow: 0 0 20px color-mix(in srgb, var(--hero-accent) 60%, transparent);
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #b9b6bb;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   🧩 Card Grid
+   =============================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  padding: 0 1rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.card-item {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.2);
+  border-color: var(--primary-color);
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card-item:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-item span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+/* ===============================
+   📱 Responsive
+   =============================== */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .card-item span {
+    font-size: 1.1rem;
+  }
+}
+

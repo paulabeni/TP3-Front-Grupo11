@@ -1,0 +1,161 @@
+/* ================================
+   AudioPlayer.css - Estilos del reproductor
+   ================================ */
+
+/* Player flotante global */
+.global-music-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.95), rgba(0, 106, 113, 0.95));
+  backdrop-filter: blur(10px);
+  padding: 1.25rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.5);
+  z-index: 999; /* 👈 Menor que sidebar (1000) */
+  min-width: 350px;
+  max-width: 90vw;
+  border: 2px solid rgba(0, 212, 255, 0.4);
+  animation: slideUp 0.3s ease;
+}
+
+.player-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.player-cover {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.4);
+}
+
+.player-cover.spinning {
+  animation: spin 6s linear infinite;
+}
+
+.player-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.player-title {
+  margin: 0;
+  font-size: 1rem;
+  color: white;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-artist {
+  margin: 0.3rem 0;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Barra de progreso */
+.progress-container {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-time {
+  fontSize: 0.7rem;
+  color: rgba(255,255,255,0.7);
+  min-width: 35px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #fff, rgba(255,255,255,0.8));
+  transition: width 0.1s linear;
+}
+
+/* Botones de control */
+.player-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.player-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  cursor: pointer;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.player-btn:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
+}
+
+.player-footer {
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  font-size: 0.7rem; /* 👈 Más pequeño */
+  color: rgba(255,255,255,0.6); /* 👈 Más discreto */
+  text-align: center;
+}
+
+/* Animaciones */
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .global-music-player {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    min-width: auto;
+    max-width: none;
+    padding: 1rem;
+  }
+
+  .player-cover {
+    width: 60px;
+    height: 60px;
+  }
+
+  .player-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}

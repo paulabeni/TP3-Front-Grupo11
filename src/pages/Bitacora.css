@@ -1,0 +1,109 @@
+/* ===========================
+   BITÁCORA - ULTRA SIMPLE
+   Reutiliza TODO de util.css
+   Solo 80 líneas específicas
+   =========================== */
+
+.bitacora {
+  animation: fadeIn 0.8s ease;
+}
+
+
+/* ---- TIMELINE ESPECÍFICO ---- */
+.timeline-section {
+  margin: 4rem 0;
+}
+
+.timeline-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #a855f7;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Línea vertical central */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #a855f7, #8b5cf6, #7c3aed);
+}
+
+/* ---- SECCIONES (reutiliza .section-content genérico) ---- */
+.section-content {
+  margin: 4rem 0;
+  padding: 0 1rem;
+}
+
+.section-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #a855f7;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+/* ---- CARDS ESPECÍFICAS ---- */
+.challenge-list,
+.learning-grid,
+.comparison-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Reflexión final */
+.reflection-box {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(139, 92, 246, 0.1));
+  border: 2px solid #a855f7;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.reflection-box h2 {
+  color: #a855f7;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.reflection-box p {
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* ===========================
+   RESPONSIVE MÍNIMO
+   =========================== */
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .reflection-box {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-bitacora {
+    padding: 2rem 1rem;
+  }
+
+  .section-content h2 {
+    font-size: 1.6rem;
+  }
+}

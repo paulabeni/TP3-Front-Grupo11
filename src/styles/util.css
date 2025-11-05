@@ -1,0 +1,188 @@
+/* ================================
+    util.css - UTILIDADES GLOBALES
+   Reutilizables en todo el proyecto
+   ================================ */
+
+/*  Variables generales */
+:root {
+  --radius: 12px;
+  --shadow-soft: 0 8px 20px rgba(0,0,0,.3);
+}
+
+/* Grillas auto-ajustables */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+.grid-auto-sm { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+/* Tarjetas básicas */
+.card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius);
+  padding: 1rem;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Imágenes tipo cover */
+.img-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: none;
+  border: none;
+}
+
+/* Botones outline reutilizables */
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+.btn-outline:hover, .btn-outline.active {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,212,255,.3);
+}
+
+/* Centrados y helpers */
+.center { display:flex; justify-content:center; align-items:center; }
+.fade-in { animation: fadeIn .3s ease; }
+
+/* Adaptabilidad */
+@media (max-width: 1024px) {
+  .grid-auto { gap: 1rem; }
+  .card { padding: 0.8rem; }
+}
+
+@media (max-width: 768px) {
+  .grid-auto { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .btn-outline { padding: 8px 16px; font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .grid-auto, .grid-1-md { grid-template-columns: 1fr !important; }
+  .card { padding: 0.7rem; }
+  .img-cover { height: 150px; }
+  .btn-outline { width: 100%; }
+}
+
+/* ================================
+   🔁 Tarjetas multimedia unificadas
+   ================================ */
+.card-media {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.card-media:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--primary-color);
+}
+
+.card-media img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.media-info {
+  padding: 1.2rem;
+  color: var(--text-color);
+}
+.media-info h3 {
+  font-size: 1.15rem;
+  margin-bottom: .5rem;
+  color: var(--primary-color);
+}
+.media-info p {
+  font-size: .92rem;
+  color: #ccc;
+  margin: .25rem 0;
+}
+
+/* ================================
+   🔘 Botones de plataformas externas
+   ================================ */
+.btn-imdb {
+  display: inline-block;
+  margin-top: .8rem;
+  padding: 8px 14px;
+  background: #f5c518;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: .9rem;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn-imdb:hover {
+  background: #ffd950;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 197, 24, .35);
+}
+
+.btn-deezer {
+  display: inline-block;
+  margin-top: .8rem;
+  padding: 8px 14px;
+  background: #007FEB;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: .9rem;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn-deezer:hover {
+  background: #1995ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 127, 235, .35);
+}
+
+/* ================================
+   🧩 Grilla unificada para listados
+   ================================ */
+.grid-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .card-media img { height: 320px; }
+}
+@media (max-width: 768px) {
+  .grid-media { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .card-media img { height: 280px; }
+}
+@media (max-width: 480px) {
+  .grid-media { grid-template-columns: 1fr; }
+  .card-media img { height: 220px; }
+}
+
+/* ================================
+   🌈 Estructura general para páginas de medios
+   ================================ */
+.media-page {
+  animation: fadeIn 0.8s ease;
+  padding: 2rem 0;
+}
+

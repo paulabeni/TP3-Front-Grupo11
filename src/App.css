@@ -1,0 +1,183 @@
+/* ================================
+   app.css - ESTILOS BASE DE App (FIX RESPONSIVE)
+   ================================ */
+
+/* CONTENEDOR PRINCIPAL */
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-color);
+  overflow-x: hidden;
+}
+
+/* SIDEBAR FIJA */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d1421 100%);
+  border-right: 2px solid #333;
+  z-index: 1000;
+  transition: left 0.3s ease;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 260px;
+  color: var(--text-color);
+  box-sizing: border-box;
+  transition: margin-left 0.3s ease;
+  /* ✅ FIX: Evita overflow horizontal */
+  max-width: calc(100vw - 260px);
+  overflow-x: hidden;
+}
+
+/* ===== DESKTOP MEDIO ===== */
+@media (max-width: 1024px) {
+  .sidebar { 
+    width: 220px; 
+  }
+  .main-content { 
+    margin-left: 220px;
+    max-width: calc(100vw - 220px); /* ✅ FIX */
+    padding: 1.5rem; 
+  }
+}
+
+/* ===== TABLETS & MÓVILES: OVERLAY MODE ===== */
+@media (max-width: 768px) {
+  /* Sidebar oculta por defecto */
+  .sidebar { 
+    left: -260px; 
+    width: 260px; 
+  }
+
+  /* Sidebar visible cuando tiene clase 'open' */
+  .sidebar.open { 
+    left: 0; 
+  }
+
+  /* Main content NUNCA se mueve en móvil */
+  .main-content { 
+    margin-left: 0;
+    max-width: 100vw; /* ✅ FIX */
+    padding: 1rem; 
+    padding-top: 4rem; /* Espacio para hamburguesa */
+  }
+}
+
+/* ===== MÓVILES PEQUEÑOS ===== */
+@media (max-width: 480px) {
+  .main-content { 
+    padding: 0.8rem; 
+    padding-top: 3.5rem;
+  }
+}
+
+/* =======================
+   SPINNER GLOBAL
+   ======================= */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: var(--primary-color);
+}
+
+.loading::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 212, 255, 0.2);
+  border-left-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+/* ===============================
+   Light Theme 
+   =============================== */
+.light-theme body {
+  background-color: #fefefe; /* Fondo claro */
+  color: #111;               /* Texto principal oscuro */
+}
+
+.light-theme h1
+ {
+  color: #eaebeb;
+}
+
+.light-theme h2
+ {
+  color: #6218eb;
+}
+.light-theme h5,
+.light-theme h6,
+.light-theme .menu-section
+ {
+  color: #361f6b;
+}
+.light-theme .menu-link{
+  color: #44127e;
+}
+
+.light-theme h3,
+.light-theme h4,
+.light-theme {
+  color: #9d6eda;
+}
+
+.light-theme p{
+  color: #d3d3d3;
+}
+.light-theme .sidebar{
+  background:  #edeaff;
+}
+
+.light-theme .diagrama-card,
+.light-theme .card,
+.light-theme .card-member,
+.light-theme .stat-card,
+.light-theme .feature-card,
+.light-theme .project-panel,
+.light-theme .intro-box  {
+  background-color: #171a22;  /* Fondo oscuro */
+  color: #e6edf3;             /* Texto claro dentro */
+ 
+}
+
+
+.light-theme .integrante-card{
+  border: 2px solid #fddbb2;
+  background: #10101b;
+}
+
+.light-theme .btn-primary {
+  color: #fff;
+}
+
+.light-theme .btn-secondary {
+  color: #08042b;
+  border-color: #38e2f8;
+}
+.light-theme .reflection-box p {
+  
+  color: #3b2055;
+  
+}
+.light-theme .hero-content p,
+.light-theme .nota-box p
+
+{
+  
+  color:  #23232e;
+  
+} 

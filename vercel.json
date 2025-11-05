@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ],
+  "functions": {
+    "api/deezer.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
+}

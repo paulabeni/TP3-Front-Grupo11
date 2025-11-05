@@ -1,0 +1,254 @@
+/* ================================
+   Integrantes.css - Página de Integrantes
+   ================================ */
+
+.integrantes {
+  animation: fadeIn 0.8s ease;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===== Sección Equipo ===== */
+.equipo-actual {
+  margin: 4rem 0;
+  padding: 0 1rem;
+}
+
+.equipo-actual h2 {
+  text-align: center;
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  color: var(--section-color, #ff8c00);
+  margin-bottom: 2rem;
+}
+
+/* ===== Grid de Integrantes ===== */
+.integrantes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Tarjeta de Integrante ===== */
+.integrante-card {
+  --color-principal: var(--primary-color);
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.integrante-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--color-principal);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.integrante-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-principal);
+}
+
+.integrante-card:hover::before {
+  transform: translateX(0);
+}
+
+/* ===== Avatar circular con overlay ===== */
+.integrante-avatar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-principal);
+}
+
+.integrante-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.avatar-overlay span {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: .5px;
+}
+
+.integrante-card:hover .integrante-avatar img {
+  transform: scale(1.08);
+}
+
+.integrante-card:hover .avatar-overlay {
+  opacity: 1;
+}
+
+/* ===== Info ===== */
+.integrante-info {
+  text-align: center;
+}
+
+.integrante-info h3 {
+  font-size: 1.6rem;
+  color: var(--color-principal);
+  margin-bottom: 0.4rem;
+  font-weight: 800;
+}
+
+.rol {
+  font-size: 1.05rem;
+  color: var(--color-principal);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.ubicacion {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 0.9rem;
+}
+
+.descripcion {
+  font-size: 0.98rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* ===== Especialidades (chips) ===== */
+.especialidades h4 {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.especialidades-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.especialidad-tag {
+  background: var(--color-principal);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ===== Nota del equipo ===== */
+.nota-cambios {
+  margin: 4rem 0 2rem;
+  padding: 0 1rem;
+}
+
+.nota-box {
+  background: rgba(255, 140, 0, 0.1);
+  border: 2px solid #ff8c00;
+  border-radius: 15px;
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nota-box h3 {
+  color: #ff8c00;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.nota-box p {
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.nota-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ================================
+   📱 Responsive definitivo (grid)
+   ================================ */
+
+/* Desktop grande: 3 columnas */
+@media (min-width: 1025px) {
+  .integrantes-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+  }
+}
+
+/* Tablets: 2 columnas */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .integrantes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+    gap: 1.5rem;
+  }
+
+  .integrante-card {
+    padding: 1.3rem;
+  }
+
+  .integrante-avatar {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* Celulares: 1 columna */
+@media (max-width: 599px) {
+  .integrantes-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .integrante-card {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .integrante-avatar {
+    width: 95px;
+    height: 95px;
+  }
+
+  .descripcion {
+    font-size: 0.95rem;
+  }
+}

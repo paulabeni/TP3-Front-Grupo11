@@ -1,0 +1,80 @@
+/*  SeccionIntegrante.css */
+/* Solo estilos específicos del componente.
+   Todo lo genérico (cards, grid, fade-in, botones, etc.) viene de util.css. */
+
+/* Contenedor principal */
+.secciones-integrante {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* Botones */
+.botones {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+/* Sección activa */
+.seccion {
+  padding: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Título de cada sección */
+.seccion h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+/* Habilidades */
+.habilidades-lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.habilidades-lista li {
+  background: rgba(0, 212, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.habilidades-lista li:hover {
+  transform: translateY(-3px);
+  background: rgba(0, 212, 255, 0.15);
+}
+
+/* =======================
+   📱 Responsive específico
+   ======================= */
+@media (max-width: 1024px) {
+  .botones {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .habilidades-lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion {
+    padding: 1rem;
+  }
+
+  .seccion h2 {
+    font-size: 1.2rem;
+  }
+}

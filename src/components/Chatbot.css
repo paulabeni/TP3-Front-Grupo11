@@ -1,0 +1,103 @@
+/* ===== Contenedor general del chatbot ===== */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* ===== Botón del robot ===== */
+.chatbot-toggle {
+  background: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  animation: floaty 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.chatbot-toggle:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ===== Animación flotante del personaje ===== */
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ===== Ventana del chatbot ===== */
+.chatbot-window {
+  position: absolute;
+  bottom: 110px;
+  right: 0;
+  width: 320px;
+  height: 420px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #00d4ff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+}
+
+/* ===== Mensajes ===== */
+.chatbot-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 85%;
+  line-height: 1.4;
+}
+
+.message.bot {
+  background: rgba(0, 212, 255, 0.2);
+  color: #fff;
+  align-self: flex-start;
+}
+
+.message.user {
+  background: rgba(236, 72, 153, 0.3);
+  color: #fff;
+  align-self: flex-end;
+}
+
+/* ===== Input del chatbot ===== */
+.chatbot-input {
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.chatbot-input button {
+  background: #00d4ff;
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 700;
+}

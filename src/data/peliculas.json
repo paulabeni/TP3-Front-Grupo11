@@ -1,0 +1,224 @@
+{
+  "peliculas": [
+    {
+      "id": 1,
+      "titulo": "Fragmentado",
+      "año": 2016,
+      "genero": "Thriller",
+      "director": "M. Night Shyamalan",
+      "rating": 7.3,
+      "duracion": "117 min",
+      "poster": "/img/peli-fragmentado.webp",
+      "url": "https://www.imdb.com/title/tt4972582"
+    },
+    {
+      "id": 2,
+      "titulo": "Harry Potter y la Piedra Filosofal",
+      "año": 2001,
+      "genero": "Fantasía",
+      "director": "Chris Columbus",
+      "rating": 7.6,
+      "duracion": "152 min",
+      "poster": "/img/peli-harrypotter.webp",
+      "url": "https://www.imdb.com/title/tt0241527"
+    },
+    {
+      "id": 3,
+      "titulo": "Interstellar",
+      "año": 2014,
+      "genero": "Ciencia Ficción",
+      "director": "Christopher Nolan",
+      "rating": 8.6,
+      "duracion": "169 min",
+      "poster": "/img/peli-interestelar.webp",
+      "url": "https://www.imdb.com/title/tt0816692"
+    },
+    {
+      "id": 4,
+      "titulo": "Inquebrantable",
+      "año": 2014,
+      "genero": "Biografía",
+      "director": "Angelina Jolie",
+      "rating": 7.2,
+      "duracion": "137 min",
+      "poster": "/img/peli-inquebrantable_1.webp",
+      "url": "https://www.imdb.com/title/tt2758890"
+    },
+    {
+      "id": 5,
+      "titulo": "El Viaje de Chihiro",
+      "año": 2001,
+      "genero": "Animación",
+      "director": "Hayao Miyazaki",
+      "rating": 8.6,
+      "duracion": "125 min",
+      "poster": "/img/peli-elviajedechihiro.webp",
+      "url": "https://www.imdb.com/title/tt0245429"
+    },
+    {
+      "id": 6,
+      "titulo": "Mi Vecino Totoro",
+      "año": 1988,
+      "genero": "Animación",
+      "director": "Hayao Miyazaki",
+      "rating": 8.1,
+      "duracion": "86 min",
+      "poster": "/img/peli-mivecinototoro.webp",
+      "url": "https://www.imdb.com/title/tt0096283"
+    },
+    {
+      "id": 7,
+      "titulo": "El Castillo Ambulante",
+      "año": 2004,
+      "genero": "Animación",
+      "director": "Hayao Miyazaki",
+      "rating": 8.2,
+      "duracion": "119 min",
+      "poster": "/img/peli-elcastilloambulante.webp",
+      "url": "https://www.imdb.com/title/tt0347149"
+    },
+    {
+      "id": 8,
+      "titulo": "Twister",
+      "año": 1996,
+      "genero": "Acción",
+      "director": "Jan de Bont",
+      "rating": 6.4,
+      "duracion": "113 min",
+      "poster": "/img/peli-twister.webp",
+      "url": "https://www.imdb.com/title/tt0117998"
+    },
+    {
+      "id": 9,
+      "titulo": "Volver al Futuro",
+      "año": 1985,
+      "genero": "Ciencia Ficción",
+      "director": "Robert Zemeckis",
+      "rating": 8.5,
+      "duracion": "116 min",
+      "poster": "/img/peli-volveral-futuro.webp",
+      "url": "https://www.imdb.com/title/tt0088763"
+    },
+    {
+      "id": 10,
+      "titulo": "Mulan",
+      "año": 1998,
+      "genero": "Animación",
+      "director": "Tony Bancroft",
+      "rating": 7.6,
+      "duracion": "88 min",
+      "poster": "/img/peli-mulan.webp",
+      "url": "https://www.imdb.com/title/tt0120762"
+    },
+    {
+      "id": 11,
+      "titulo": "Matrix",
+      "año": 1999,
+      "genero": "Ciencia Ficción",
+      "director": "Lana y Lilly Wachowski",
+      "rating": 8.7,
+      "duracion": "136 min",
+      "poster": "/img/peli-matrix.webp",
+      "url": "https://www.imdb.com/title/tt0133093"
+    },
+    {
+      "id": 12,
+      "titulo": "El Señor de los Anillos: La Comunidad del Anillo",
+      "año": 2001,
+      "genero": "Fantasía",
+      "director": "Peter Jackson",
+      "rating": 8.8,
+      "duracion": "178 min",
+      "poster": "/img/peli-elsenordelosanillos.webp",
+      "url": "https://www.imdb.com/title/tt0120737"
+    },
+    {
+      "id": 13,
+      "titulo": "Inception",
+      "año": 2010,
+      "genero": "Ciencia Ficción",
+      "director": "Christopher Nolan",
+      "rating": 8.8,
+      "duracion": "148 min",
+      "poster": "/img/peli-inception.webp",
+      "url": "https://www.imdb.com/title/tt1375666"
+    },
+    {
+      "id": 14,
+      "titulo": "El Laberinto del Fauno",
+      "año": 2006,
+      "genero": "Fantasía",
+      "director": "Guillermo del Toro",
+      "rating": 8.2,
+      "duracion": "118 min",
+      "poster": "/img/peli-ellaberintodelfauno.webp",
+      "url": "https://www.imdb.com/title/tt0457430"
+    },
+    {
+      "id": 15,
+      "titulo": "Coco",
+      "año": 2017,
+      "genero": "Animación",
+      "director": "Lee Unkrich",
+      "rating": 8.4,
+      "duracion": "105 min",
+      "poster": "/img/peli-coco.webp",
+      "url": "https://www.imdb.com/title/tt2380307"
+    },
+    {
+      "id": 16,
+      "titulo": "El Caballero de la Noche",
+      "año": 2008,
+      "genero": "Acción",
+      "director": "Christopher Nolan",
+      "rating": 9.0,
+      "duracion": "152 min",
+      "poster": "/img/peli-elcaballerodelanoche.webp",
+      "url": "https://www.imdb.com/title/tt0468569"
+    },
+    {
+      "id": 17,
+      "titulo": "La La Land",
+      "año": 2016,
+      "genero": "Musical",
+      "director": "Damien Chazelle",
+      "rating": 8.0,
+      "duracion": "128 min",
+      "poster": "/img/peli-lalaland.webp",
+      "url": "https://www.imdb.com/title/tt3783958"
+    },
+    {
+      "id": 18,
+      "titulo": "El Gran Hotel Budapest",
+      "año": 2014,
+      "genero": "Comedia",
+      "director": "Wes Anderson",
+      "rating": 8.1,
+      "duracion": "99 min",
+      "poster": "/img/peli-elgranhotelbudapest.webp",
+      "url": "https://www.imdb.com/title/tt2278388"
+    },
+    {
+      "id": 19,
+      "titulo": "Mad Max: Fury Road",
+      "año": 2015,
+      "genero": "Acción",
+      "director": "George Miller",
+      "rating": 8.1,
+      "duracion": "120 min",
+      "poster": "/img/peli-madmaxfuryroad.webp",
+      "url": "https://www.imdb.com/title/tt1392190"
+    },
+    {
+      "id": 20,
+      "titulo": "Your Name",
+      "año": 2016,
+      "genero": "Animación",
+      "director": "Makoto Shinkai",
+      "rating": 8.4,
+      "duracion": "106 min",
+      "poster": "/img/peli-yourname.webp",
+      "url": "https://www.imdb.com/title/tt5311514"
+    }
+  ]
+}

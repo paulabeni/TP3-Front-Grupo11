@@ -1,0 +1,98 @@
+/* ===========================
+   TIMELINE ITEM - ULTRA SIMPLE
+   Solo estilos específicos del timeline
+   =========================== */
+
+/* Ítem individual */
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Punto decorativo */
+.timeline-dot {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #a855f7;
+  border-radius: 50%;
+  border: 3px solid rgba(168, 85, 247, 0.3);
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+/* Tarjeta de contenido (reutiliza .card de util.css) */
+.timeline-content {
+  background: rgba(168, 85, 247, 0.05);
+  border: 2px solid #a855f7;
+  border-radius: 15px;
+  padding: 1.5rem;
+  position: relative;
+  width: 45%;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.2);
+  animation: fadeIn 0.5s ease;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.3);
+}
+
+/* Alternancia izquierda/derecha */
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: 55%;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 55%;
+  text-align: left;
+}
+
+/* Títulos y fecha */
+.timeline-content h3 {
+  color: #c084fc;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.timeline-date {
+  display: inline-block;
+  background: linear-gradient(135deg, #a855f7, #8b5cf6);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(168, 85, 247, 0.3);
+}
+
+.timeline-content p {
+  color: #ddd;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .timeline-dot {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-content {
+    width: auto;
+    margin-left: 60px !important;
+    margin-right: 0 !important;
+    text-align: left;
+  }
+}

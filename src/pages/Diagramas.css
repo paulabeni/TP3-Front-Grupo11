@@ -1,0 +1,93 @@
+/* ===========================
+   DIAGRAMAS - ESTILOS OPTIMIZADOS
+   =========================== */
+
+.diagramas {
+  animation: fadeIn 0.8s ease;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ---- HERO SECCIÓN ---- */
+.hero-diagramas {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 217, 61, 0.1), rgba(168, 85, 247, 0.1));
+  border-radius: 20px;
+  margin-bottom: 3rem;
+}
+
+.hero-diagramas h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-color), #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-diagramas p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* ---- CONTENEDORES GENERALES ---- */
+.diagramas-visuales {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.diagrama-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.diagrama-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.diagrama-card p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.diagrama-img {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1rem;
+}
+
+/* ---- SECCIONES COMPARTIDAS ---- */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.layer,
+.page-node,
+.tech-category {
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .hero-diagramas {
+    padding: 2rem 1rem;
+  }
+  .diagrama-card {
+    padding: 1.5rem;
+  }
+  .diagrama-img {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,226 @@
+/* ================================
+   themes.css - ESTILOS UNIFICADOS PARA PORTALES
+   Un solo archivo para los 3 temas
+   ================================ */
+
+/* === BASE COMÚN (heredada de IntegrantesBase.css) === */
+
+/* === TEMA MICAELA: Violeta y Dorado === */
+.micaela-theme .tarjeta-integrante {
+  background: linear-gradient(135deg, #7C4585, #3D365C);
+  border: 3px solid var(--theme-primary);
+  box-shadow: 0 8px 25px rgba(124, 69, 133, 0.4);
+}
+
+.micaela-theme .avatar-container {
+  border: 3px solid var(--theme-secondary);
+  box-shadow: 0 8px 25px rgba(201, 87, 146, 0.2);
+}
+
+.micaela-theme .avatar-container:hover {
+  border-color: var(--theme-primary);
+  box-shadow: 0 8px 25px rgba(201, 87, 146, 0.6);
+}
+
+.micaela-theme .contenido-integrante h1 {
+  color: var(--theme-primary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.micaela-theme .rol {
+  color: var(--theme-secondary);
+}
+
+.micaela-theme .info-basica {
+  background: rgba(201, 87, 146, 0.15);
+  border: 2px solid var(--theme-secondary);
+}
+
+.micaela-theme .info-basica strong {
+  color: var(--theme-primary);
+}
+
+.micaela-theme .btn-outline {
+  border-color: var(--theme-primary);
+  color: var(--theme-primary);
+}
+
+.micaela-theme .btn-outline:hover,
+.micaela-theme .btn-outline.active {
+  background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+  color: white;
+  box-shadow: 0 4px 15px rgba(248, 181, 95, 0.4);
+}
+
+.micaela-theme .seccion {
+  background: rgba(248, 181, 95, 0.08);
+  border: 1px solid rgba(248, 181, 95, 0.3);
+}
+
+.micaela-theme .seccion h2 {
+  color: var(--theme-primary);
+}
+
+/* === TEMA PAULA: Tech Futurista Azul === */
+.paula-theme .tarjeta-integrante {
+  background: linear-gradient(135deg, #4118b1, #2d0a7a);
+  border: 3px solid var(--theme-primary);
+  box-shadow: 0 8px 30px rgba(65, 24, 177, 0.4);
+}
+
+.paula-theme .avatar-container {
+  border: 3px solid var(--theme-primary);
+}
+
+.paula-theme .avatar-container:hover {
+  border-color: var(--theme-secondary);
+  transform: scale(1.05);
+}
+
+.paula-theme .contenido-integrante h1 {
+  color: var(--theme-primary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.paula-theme .rol {
+  color: var(--theme-primary);
+}
+
+.paula-theme .info-basica {
+  background: rgba(58, 213, 252, 0.1);
+  border: 2px solid rgba(58, 213, 252, 0.3);
+}
+
+.paula-theme .info-basica strong {
+  color: var(--theme-primary);
+}
+
+.paula-theme .btn-outline {
+  border-color: var(--theme-primary);
+  color: var(--theme-primary);
+}
+
+.paula-theme .btn-outline:hover,
+.paula-theme .btn-outline.active {
+  background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+  color: white;
+  box-shadow: 0 4px 15px rgba(58, 213, 252, 0.4);
+}
+
+.paula-theme .seccion {
+  background: rgba(58, 213, 252, 0.05);
+  border: 1px solid rgba(58, 213, 252, 0.2);
+}
+
+.paula-theme .seccion h2 {
+  color: var(--theme-primary);
+}
+
+/* === TEMA MARÍA: Retro 80s === */
+.maria-theme .tarjeta-integrante {
+  background: linear-gradient(135deg, #955ea0, #4a0b78);
+  border: 3px solid var(--theme-primary);
+  box-shadow: 0 8px 25px rgba(26, 24, 26, 0.5);
+  position: relative;
+}
+
+.maria-theme .avatar-container {
+  border: 3px solid var(--theme-primary);
+  box-shadow: 0 8px 25px rgba(248, 181, 95, 0.2);
+}
+
+.maria-theme .avatar-container:hover {
+  transform: scale(1.05);
+  border-color: var(--theme-secondary);
+  box-shadow: 0 8px 25px rgba(248, 181, 95, 0.4);
+}
+
+.maria-theme .contenido-integrante h1 {
+  color: var(--theme-primary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.maria-theme .rol {
+  color: var(--theme-primary);
+}
+
+.maria-theme .info-basica {
+  background: rgba(17, 24, 39, 0.3);
+  border: 2px solid var(--theme-secondary);
+  box-shadow: 0 0 10px rgba(223, 210, 225, 0.2);
+}
+
+.maria-theme .info-basica strong {
+  color: var(--theme-primary);
+}
+
+.maria-theme .btn-outline {
+  border-color: var(--theme-primary);
+  color: var(--theme-primary);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.maria-theme .btn-outline:hover,
+.maria-theme .btn-outline.active {
+  background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+  color: white;
+  box-shadow: 0 4px 15px rgba(248, 181, 95, 0.4);
+}
+
+.maria-theme .seccion {
+  background: rgba(17, 24, 39, 0.3);
+  border: 1px solid rgba(248, 181, 95, 0.3);
+}
+
+.maria-theme .seccion h2 {
+  color: var(--theme-primary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto retro escaneado para María */
+.maria-theme .tarjeta-integrante::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 255, 0.03) 2px,
+    rgba(0, 255, 255, 0.03) 4px
+  );
+  pointer-events: none;
+  border-radius: var(--radius, 12px);
+}
+
+/* === Responsive unificado === */
+@media (max-width: 768px) {
+  .micaela-theme .tarjeta-integrante,
+  .paula-theme .tarjeta-integrante,
+  .maria-theme .tarjeta-integrante {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .micaela-theme .avatar-container,
+  .paula-theme .avatar-container,
+  .maria-theme .avatar-container {
+    width: 220px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .micaela-theme .contenido-integrante h1,
+  .paula-theme .contenido-integrante h1,
+  .maria-theme .contenido-integrante h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .micaela-theme .contenido-integrante h1,
+  .paula-theme .contenido-integrante h1,
+  .maria-theme .contenido-integrante h1 {
+    font-size: 1.8rem;
+  }
+}

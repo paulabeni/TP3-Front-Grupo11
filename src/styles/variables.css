@@ -1,0 +1,77 @@
+/* ================================
+   variables.css VARIABLES GLOBALES
+   Definición de colores, tipografía y sombras
+   ================================ */
+
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /*  Colores principales */
+  --primary-color: #00d4ff;      /* celeste principal */
+  --accent-color: #9acbd0;       /* celeste grisáceo */
+  --bg-color: #0d1117;           /* fondo general oscuro */
+  --text-color: #118af5;         /* texto principal */
+  --text-secondary: #b0b0b0;     /* texto secundario */
+
+  /*  Gradientes */
+  --gradient-primary: linear-gradient(135deg, #00d4ff, #006a71);
+  --gradient-accent: linear-gradient(135deg, #48a6a7, #10cadf);
+
+  /*  Estructura y sombras */
+  --radius: 12px;
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+  /*  Tipografía */
+  --font-heading: 'Orbitron', sans-serif;    /* Títulos - futurista */
+  --font-main: 'Poppins', sans-serif;        /* Cuerpo - moderna */
+  --font-code: 'Roboto Mono', monospace;     /* Código */
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+}
+
+/* Tipografía global (se aplica automáticamente) */
+body, button, input, textarea, p, li {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  line-height: var(--line-height-base);
+}
+
+/* Títulos principales con Orbitron */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Títulos secundarios mantienen Poppins */
+h4, h5, h6 {
+  font-family: var(--font-main);
+  font-weight: 600;
+}
+
+/* Elementos de código */
+code, pre {
+  font-family: var(--font-code);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Optimización de carga */
+body {
+  font-display: swap;
+}
+/* ================================
+   🌞 Tema Claro (Light Theme)
+   ================================ */
+.light-theme {
+  --primary-color: #3351d8;      
+  --accent-color: #4d42ec;        /* Verde azulado suave */
+  --bg-color: #f7f7f7;            /* Fondo claro */
+  --text-color: #111111;          /* Texto oscuro */
+  --text-secondary: #333333;      /* Texto secundario gris */
+  
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
