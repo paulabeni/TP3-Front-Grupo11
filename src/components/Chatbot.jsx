@@ -26,7 +26,7 @@ export default function Chatbot() {
     
 
   if (msg.includes("hola") || msg.includes("buenas"))
-    return "¡Hola! 👋 Bienvenido a TechVerse. ¿Querés saber sobre el proyecto, las integrantes o los trabajos prácticos?";
+    return "¡Hola! Soy TechIT, el asistente del grupo 11👋 Bienvenido a TechVerse. ¿Querés saber sobre el proyecto, las integrantes o los trabajos prácticos?";
 
   if (msg.includes("proyecto"))
     return "🌐 El proyecto se llama TechVerse, un espacio interactivo donde cada integrante tiene su propio portal. Representa la evolución del trabajo desde el TP1 hasta el TP3.";
@@ -53,7 +53,7 @@ export default function Chatbot() {
   if (msg.includes("deezer") || msg.includes("musica"))
     return "🎵 Se integró la API de Deezer para reproducir música en el sitio sin necesidad de un backend propio.";
 
-  if (msg.includes("adios") || msg.includes("chau"))
+  if (msg.includes("gracias") || msg.includes("chau"))
     return "¡Hasta luego! 👋 Gracias por visitar el Multiverso Digital.";
 
   return "🤔 No entendí del todo. Podés preguntarme sobre el proyecto, las integrantes o los TP1, TP2 y TP3.";

@@ -1,5 +1,5 @@
 // ===== MÚSICA =====
-// Musica.jsx - Con HeroSection
+// Musica.jsx - Con HeroSection y paginación
 import { useState, useEffect } from "react";
 import HeroSection from "../components/ui/HeroSection";
 import "../styles/util.css";
@@ -10,20 +10,30 @@ export default function Musica() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // 🆕 Estados para paginación
+  const [page, setPage] = useState(0); // página actual
+  const limit = 20; // cantidad de canciones por página
+
+  // 🆕 useEffect modificado para incluir la paginación
   useEffect(() => {
     const fetchDeezer = async () => {
       try {
-        // ✅ FIX: Siempre usar /api/deezer sin parámetros para top global
-        const response = await fetch("/api/deezer");
-        
+        setLoading(true);
+        setError(null);
+
+        // 🆕 Ahora traemos canciones por página usando index y limit
+        const response = await fetch(
+          `https://api.deezer.com/chart/0/tracks?index=${page * limit}&limit=${limit}`
+        );
+
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
-        
+
         const data = await response.json();
 
         if (data.data && Array.isArray(data.data)) {
-          setCanciones(data.data.slice(0, 10)); // 🔹 Solo top 10 canciones
+          setCanciones(data.data);
         } else {
           setError("No se encontraron canciones 😞");
         }
@@ -36,7 +46,7 @@ export default function Musica() {
     };
 
     fetchDeezer();
-  }, []);
+  }, [page]); // 🆕 recarga los datos cuando cambia la página
 
   if (loading)
     return (
@@ -52,18 +62,22 @@ export default function Musica() {
       </div>
     );
 
-   return (
+  // 🆕 Funciones para cambiar de página
+  const handleNext = () => setPage((prev) => prev + 1);
+  const handlePrev = () => setPage((prev) => Math.max(prev - 1, 0));
+
+  return (
     <div className="media-page fade-in">
       <HeroSection
-  title="🎶 Top Global — Deezer"
-  subtitle="Las 10 canciones más escuchadas del momento 🌍"
-  accentColor="#ff69b4"
-/>
+        title="🎶 Top Global — Deezer"
+        subtitle={`Canciones más escuchadas del mundo 🌍 (Página ${page + 1})`}
+        accentColor="#ff69b4"
+      />
 
       <section className="media-listado card">
         <h2>Ranking mundial</h2>
         <p className="api-indicator">
-          Mostrando {canciones.length} canciones
+          Mostrando {canciones.length} canciones (página {page + 1})
         </p>
 
         <div className="grid-media">
@@ -96,6 +110,20 @@ export default function Musica() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* 🆕 Controles de paginación */}
+        <div className="pagination-controls">
+          <button
+            onClick={handlePrev}
+            disabled={page === 0}
+            className="btn-paginacion"
+          >
+            ⬅️ Anterior
+          </button>
+          <button onClick={handleNext} className="btn-paginacion">
+            Siguiente ➡️
+          </button>
         </div>
 
         {/* 💬 Créditos de fuente */}

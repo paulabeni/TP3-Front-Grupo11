@@ -1,4 +1,4 @@
-# TechVerse - Grupo 11 - TP2 React
+# TechVerse - Grupo 11 - TP React
 
 [![React](https://img.shields.io/badge/React-18.0.0-blue?logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.0.0-purple?logo=vite)](https://vitejs.dev/)
