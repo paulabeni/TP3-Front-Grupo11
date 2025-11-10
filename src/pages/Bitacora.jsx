@@ -84,8 +84,19 @@ export default function Bitacora() {
       fecha: "22/10/25", 
       titulo: "Entrega Final TP2", 
       descripcion: "Deploy exitoso en Vercel con todas las funcionalidades operativas incluyendo reproductor de música funcional. Repositorio GitHub actualizado con commits organizados. Proyecto completo cumpliendo 100% de las consignas: SPA funcional, 2 APIs integradas (Deezer + iTunes), responsive, diagramas incluidos, reproductor global."
-    }
-  ];
+    },
+    { 
+      fecha: "05/11/25", 
+      titulo: "Implementación de Mejoras — TP3", 
+      descripcion: "Se desarrollaron e integraron las cinco mejoras requeridas para el TP3: botones animados en los portales, búsqueda y filtrado en JSON local, modo claro/oscuro, chatbot interactivo con respuestas sobre los trabajos previos y paginación en la API de música."
+    },
+     { 
+      fecha: "10/11/25", 
+      titulo: "Entrega Final TP3", 
+      descripcion: "Deploy final exitoso en Vercel, con todas las mejoras implementadas y la API de Deezer actualizada con paginación funcional."
+      }
+  
+    ];
 
    return (
     <div className="bitacora">
@@ -283,17 +294,13 @@ export default function Bitacora() {
         <div className="reflection-box">
           <h2>💭 Reflexión del Equipo</h2>
           <p>
-            Este proyecto nos enseñó que <strong>migrar de tecnologías legacy a frameworks modernos</strong> no 
-            solo mejora el código, sino también la experiencia del desarrollador y del usuario final.
+            El desarrollo del TP3 representó una etapa clave en nuestro aprendizaje, ya que pudimos consolidar los conocimientos adquiridos en los trabajos anteriores y aplicar nuevas habilidades en React, una tecnología que facilita la reutilización del código y la creación de componentes modulares y dinámicos.
           </p>
           <p>
-            El trabajo en equipo fue fundamental: cada integrante aportó desde su especialidad (diseño, 
-            lógica, optimización) pero todos aprendimos de todos. Las reuniones semanales de sincronización 
-            y el uso de GitHub para code reviews mantuvieron el proyecto organizado.
+            Durante este trabajo, comprendimos la importancia de estructurar una aplicación de forma clara y organizada, aprovechando las ventajas de una SPA (Single Page Application) para optimizar la experiencia del usuario. Los componentes reutilizables nos permitieron realizar cambios con mayor facilidad, mejorando la eficiencia del desarrollo y la mantenibilidad del proyecto.
           </p>
           <p>
-            <strong>Lo más valioso:</strong> entender que la componentización no es solo "dividir código", 
-            sino pensar en piezas reutilizables y mantenibles que faciliten el crecimiento futuro del proyecto.
+            Los desafíos que se nos presentaron al migrar el TP1 y TP2 fueron fundamentales, ya que nos enseñaron a identificar problemas comunes y resolverlos con mayor autonomía. Gracias a esa experiencia previa, en este TP3 logramos implementar mejoras de manera más sencilla, fortaleciendo nuestra comprensión del flujo de datos, el manejo de estados y la interacción entre componentes.
           </p>
         </div>
       </section>
