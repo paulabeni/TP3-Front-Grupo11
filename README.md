@@ -1,4 +1,4 @@
-# TechVerse - Grupo 11 - TP React
+# TechVerse - Grupo 11 - TP3 React
 
 [![React](https://img.shields.io/badge/React-18.0.0-blue?logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.0.0-purple?logo=vite)](https://vitejs.dev/)
@@ -7,8 +7,8 @@
 
 ## 🌐 Links del Proyecto
 
-- **🚀 Deploy en Vercel:** [https://tp-2-front-grupo11-rho.vercel.app/](https://tp-2-front-grupo11-rho.vercel.app/)
-- **📂 Repositorio GitHub:** [[https://github.com/micakn/TP2-Front-Grupo11.](https://github.com/micakn/TP2-Front-Grupo11.)]
+- **🚀 Deploy en Vercel:** https://tp3-grupo11.vercel.app/)
+- **📂 Repositorio GitHub:** https://github.com/paulabeni/TP3-Front-Grupo11
 
 ---
 
