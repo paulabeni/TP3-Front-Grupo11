@@ -1,11 +1,12 @@
 // api/deezer.js
 export default async function handler(req, res) {
   try {
-    // Tomamos los parámetros de paginación (por defecto: 0 y 10)
-    const { index = 0, limit = 10 } = req.query;
+    const { index = 0, limit = 10, artist } = req.query;
 
-    //  URL hacia la API pública 
-    const url = `https://api.deezer.com/chart/0/tracks?index=${index}&limit=${limit}`;
+    // Si hay parámetro artist, buscar artistas. Si no, obtener chart
+    const url = artist
+      ? `https://api.deezer.com/search/artist?q=${encodeURIComponent(artist)}&limit=1`
+      : `https://api.deezer.com/chart/0/tracks?index=${index}&limit=${limit}`;
 
     const response = await fetch(url);
     if (!response.ok) {
