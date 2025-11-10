@@ -1,5 +1,5 @@
 // ===== MÚSICA =====
-// Musica.jsx - Con HeroSection y paginación
+// Musica.jsx - Con HeroSection
 import { useState, useEffect } from "react";
 import HeroSection from "../components/ui/HeroSection";
 import "../styles/util.css";
@@ -11,42 +11,41 @@ export default function Musica() {
   const [error, setError] = useState(null);
 
   // 🆕 Estados para paginación
-  const [page, setPage] = useState(0); // página actual
-  const limit = 20; // cantidad de canciones por página
+  const [page, setPage] = useState(0);
+  const limit = 10;
 
-  // 🆕 useEffect modificado para incluir la paginación
-  useEffect(() => {
-    const fetchDeezer = async () => {
-      try {
-        setLoading(true);
-        setError(null);
+  // 🆕 Cargar canciones con paginación
+  const fetchDeezer = async (index) => {
+    try {
+      setLoading(true);
+      setError(null);
 
-        // 🆕 Ahora traemos canciones por página usando index y limit
-        const response = await fetch(
-          `https://api.deezer.com/chart/0/tracks?index=${page * limit}&limit=${limit}`
-        );
+      // ✅ Llamamos a nuestra API local (proxy), no directamente a Deezer
+      const response = await fetch(`/api/deezer?index=${index}&limit=${limit}`);
 
-        if (!response.ok) {
-          throw new Error(`Error ${response.status}: ${response.statusText}`);
-        }
-
-        const data = await response.json();
-
-        if (data.data && Array.isArray(data.data)) {
-          setCanciones(data.data);
-        } else {
-          setError("No se encontraron canciones 😞");
-        }
-      } catch (err) {
-        console.error("❌ Error al cargar datos de Deezer:", err);
-        setError("Error al cargar datos de Deezer. Intenta más tarde.");
-      } finally {
-        setLoading(false);
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
       }
-    };
 
-    fetchDeezer();
-  }, [page]); // 🆕 recarga los datos cuando cambia la página
+      const data = await response.json();
+
+      if (data.data && Array.isArray(data.data)) {
+        setCanciones(data.data);
+      } else {
+        setError("No se encontraron canciones 😞");
+      }
+    } catch (err) {
+      console.error("❌ Error al cargar datos de Deezer:", err);
+      setError("Error al cargar datos de Deezer. Intenta más tarde.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // 🆕 Llamar a la API cuando cambia la página
+  useEffect(() => {
+    fetchDeezer(page * limit);
+  }, [page]);
 
   if (loading)
     return (
@@ -62,22 +61,18 @@ export default function Musica() {
       </div>
     );
 
-  // 🆕 Funciones para cambiar de página
-  const handleNext = () => setPage((prev) => prev + 1);
-  const handlePrev = () => setPage((prev) => Math.max(prev - 1, 0));
-
   return (
     <div className="media-page fade-in">
       <HeroSection
         title="🎶 Top Global — Deezer"
-        subtitle={`Canciones más escuchadas del mundo 🌍 (Página ${page + 1})`}
+        subtitle="Canciones más escuchadas del momento 🌍"
         accentColor="#ff69b4"
       />
 
       <section className="media-listado card">
         <h2>Ranking mundial</h2>
         <p className="api-indicator">
-          Mostrando {canciones.length} canciones (página {page + 1})
+          Mostrando {canciones.length} canciones (Página {page + 1})
         </p>
 
         <div className="grid-media">
@@ -113,20 +108,23 @@ export default function Musica() {
         </div>
 
         {/* 🆕 Controles de paginación */}
-        <div className="pagination-controls">
+        <div className="pagination" style={{ marginTop: "2rem", textAlign: "center" }}>
           <button
-            onClick={handlePrev}
+            className="btn"
+            onClick={() => setPage((prev) => Math.max(prev - 1, 0))}
             disabled={page === 0}
-            className="btn-paginacion"
           >
             ⬅️ Anterior
           </button>
-          <button onClick={handleNext} className="btn-paginacion">
+          <button
+            className="btn"
+            onClick={() => setPage((prev) => prev + 1)}
+          >
             Siguiente ➡️
           </button>
         </div>
 
-        {/* 💬 Créditos de fuente */}
+        {/* 💬 Créditos */}
         <p
           style={{
             marginTop: "2rem",
@@ -143,8 +141,7 @@ export default function Musica() {
             style={{ color: "#A238FF", textDecoration: "none" }}
           >
             API pública de Deezer
-          </a>
-          .
+          </a>.
         </p>
       </section>
     </div>
