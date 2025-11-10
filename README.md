@@ -69,11 +69,15 @@ Ejemplos de preguntas:
 <img width="1082" height="570" alt="image" src="https://github.com/user-attachments/assets/a53073cc-0749-4261-8222-0c35947d35eb" />
 
 	
-⚡ 5. Mejoras de accesibilidad y coherencia visual
+⚡ 5. Paginación en API de Música (Deezer)
 
-Descripción:
-Se realizaron ajustes generales en la paleta de colores, contrastes y tipografía para mejorar la legibilidad y accesibilidad del sitio.
-También se unificaron estilos en el modo claro/oscuro y se optimizaron transiciones entre páginas para una navegación más fluida.
+Se implementó un sistema de paginación dinámica en la sección de Música, que consume la API pública de Deezer mediante un endpoint propio (/api/deezer).
+Antes, solo se mostraban las primeras 10 canciones del Top Global.
+<img width="1053" height="556" alt="image" src="https://github.com/user-attachments/assets/708d48c8-3c88-4013-b06e-8819fff39444" />
+
+Ahora, se puede navegar entre diferentes páginas de resultados utilizando los botones “Anterior” y “Siguiente”, mostrando nuevas canciones sin recargar la página.
+<img width="1059" height="575" alt="image" src="https://github.com/user-attachments/assets/8b1e0a54-51f9-43a5-9f4d-35fe26e6c18b" />
+<img width="1056" height="375" alt="image" src="https://github.com/user-attachments/assets/53093121-fd3e-411b-befa-2b53fa4b5d61" />
 
 ---
 
