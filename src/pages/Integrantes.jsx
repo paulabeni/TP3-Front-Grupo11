@@ -104,10 +104,8 @@ export default function Integrantes() {
         <div className="nota-box">
           <h3>📝 Nota sobre el Equipo</h3>
           <p>
-            Para este TP2, el equipo está conformado por <strong>Paula</strong>, <strong>Micaela</strong> y <strong>María</strong>.
-            Cada integrante mantiene su propio portal individual con un estilo y personalidad únicos,
-            reflejando la diversidad creativa del grupo y su compromiso con el desarrollo colaborativo.
-          </p>
+            El equipo está conformado por <strong>Paula</strong>, <strong>Micaela</strong> y <strong>María</strong>.
+            Cada integrante mantiene su propio portal individual, unificamos el estilo de los mismos para un mejorar el Diseño de la App.          </p>
           <p>
             Las secciones individuales incluyen información sobre habilidades, películas y música favoritas,
             con un enfoque en el diseño personalizado y la integración dinámica de datos para fortalecer la práctica en React.
